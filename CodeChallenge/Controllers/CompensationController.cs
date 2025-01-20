@@ -28,6 +28,12 @@ namespace CodeChallenge.Controllers
             _employeeService = employeeService;
         }
 
+        /// <summary>
+        /// takes a compensation object and checks to make sure the employee is valid. If so it creates the compensation entry.
+        /// If not it will return not found.
+        /// </summary>
+        /// <param name="compensation"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult CreateCompensation([FromBody] Compensation compensation)
         {
